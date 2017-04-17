@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<meals>
+    <meal>
+        <meal_id>1</meal_id>
+        <user_id>1</user_id>
+        <meal_date>2017-04-16T00:00:00.000+03:00</meal_date>
+        <meal_kcal>1414</meal_kcal>
+        <meal_protein>142</meal_protein>
+        <meal_carbon>323</meal_carbon>
+        <meal_fat>43</meal_fat>
+    </meal>
+    <meal>
+        <meal_id>2</meal_id>
+        <user_id>5</user_id>
+        <meal_date>2017-04-16T00:00:00.000+03:00</meal_date>
+        <meal_kcal>814</meal_kcal>
+        <meal_protein>102</meal_protein>
+        <meal_carbon>123</meal_carbon>
+        <meal_fat>23</meal_fat>
+    </meal>
+    <meal>
+        <meal_id>3</meal_id>
+        <user_id>1</user_id>
+        <meal_date>2017-04-16T00:00:00.000+03:00</meal_date>
+        <meal_kcal>414</meal_kcal>
+        <meal_protein>102</meal_protein>
+        <meal_carbon>65</meal_carbon>
+        <meal_fat>29</meal_fat>
+    </meal>
+</meals>

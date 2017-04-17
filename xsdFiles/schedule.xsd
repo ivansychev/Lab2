@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
+	<xs:element name="schedules">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="schedule" type="schedule" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="schedule">
+		<xs:sequence>
+			<xs:element name="schedule_id">
+				<xs:simpleType>
+					<xs:restriction base="xs:int"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="user_id">
+				<xs:simpleType>
+					<xs:restriction base="xs:int"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="exercise_id">
+				<xs:simpleType>
+					<xs:restriction base="xs:int"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="exercise_order">
+				<xs:simpleType>
+					<xs:restriction base="xs:int"/>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

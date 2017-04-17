@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<users>
+    <user>
+        <user_id>1</user_id>
+        <user_rights>user</user_rights>
+        <user_firstname>Олаф</user_firstname>
+        <user_surname>Моржовый Хер</user_surname>
+        <user_email>lalka@kek.ru</user_email>
+        <user_password>qwerty123</user_password>
+        <user_mobile>89034567859</user_mobile>
+    </user>
+    <user>
+        <user_id>5</user_id>
+        <user_rights>user</user_rights>
+        <user_firstname>Тормунд</user_firstname>
+        <user_surname>Медвежий Муж</user_surname>
+        <user_email>pepe@kek.ru</user_email>
+        <user_password>1234abcd</user_password>
+        <user_mobile>89452345233</user_mobile>
+    </user>
+</users>

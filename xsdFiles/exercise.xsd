@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
+	<xs:element name="exercises">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="exercise" type="exercise" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>	
+	
+	<xs:complexType name="exercise">
+		<xs:sequence>
+			<xs:element name="exercise_id">
+				<xs:simpleType>
+					<xs:restriction base="xs:int"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="user_id">
+				<xs:simpleType>
+					<xs:restriction base="xs:int"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="exercise_name">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="exercise_set">
+				<xs:simpleType>
+					<xs:restriction base="xs:int"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="exercise_reps">
+				<xs:simpleType>
+					<xs:restriction base="xs:int"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="exercise_duration_mins">
+				<xs:simpleType>
+					<xs:restriction base="xs:float"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="exercise_weight_kg">
+				<xs:simpleType>
+					<xs:restriction base="xs:float"/>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

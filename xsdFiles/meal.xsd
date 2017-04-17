@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
+	<xs:element name="meals">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="meal" type="meal" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	
+	<xs:complexType name="meal">
+		<xs:sequence>
+			<xs:element name="meal_id">
+				<xs:simpleType>
+					<xs:restriction base="xs:int"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="user_id">
+				<xs:simpleType>
+					<xs:restriction base="xs:int"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="meal_date">
+				<xs:simpleType>
+					<xs:restriction base="xs:date"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="meal_kcal">
+				<xs:simpleType>
+					<xs:restriction base="xs:int"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="meal_protein">
+				<xs:simpleType>
+					<xs:restriction base="xs:int"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="meal_carbon">
+				<xs:simpleType>
+					<xs:restriction base="xs:int"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="meal_fat">
+				<xs:simpleType>
+					<xs:restriction base="xs:int"/>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
