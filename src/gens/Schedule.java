@@ -138,4 +138,10 @@ public class Schedule {
         this.exerciseOrder = value;
     }
 
+    @Override
+    public String toString() {
+        return "('"  + userId
+                + "','" + exerciseId +
+                "','" + exerciseOrder + "')";
+    }
 }

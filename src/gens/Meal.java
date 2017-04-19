@@ -222,4 +222,13 @@ public class Meal {
         this.mealFat = value;
     }
 
+    @Override
+    public String toString() {
+        return "('"  + userId
+                + "','" + mealDate +
+                "','" + mealKcal +
+                "','" + mealProtein +
+                "','" + mealCarbon +
+                "','" + mealFat + "')";
+    }
 }

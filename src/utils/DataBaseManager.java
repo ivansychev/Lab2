@@ -1,12 +1,12 @@
 package utils;
 import gens.*;
 
+
+import java.lang.reflect.Field;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.sql.*;
-import java.time.LocalDate;
-import java.time.ZoneId;
 import java.util.GregorianCalendar;
 
 public class DataBaseManager {
@@ -166,6 +166,25 @@ public class DataBaseManager {
         }
     }
 
+    public <T> void create(T object)
+    {
+        Connection connection = initConnection();
+        String dbName = object.getClass().getName().replaceAll(".*(?=\\.).","").toLowerCase()+"s";
+
+        String qr = "";
+        if (dbName.equals("users")) qr = "user_rights,user_firstname,user_surname,user_email,user_password,user_mobile";
+        if (dbName.equals("meals")) qr = "user_user_id, meal_date, meal_kcal, meal_proteins, meal_carbons, meal_fat";
+        if (dbName.equals("schedules")) qr = "user_user_id, exercise_exercise_id, exercise_order";
+        if (dbName.equals("exercises")) qr = "user_user_id, exercise_name, exercise_set, exercise_reps, exercise_duration_mins, exercise_weight_kg";
+
+        try {
+            Statement statement = connection.createStatement();
+            statement.execute("INSERT INTO "+dbName+"("+ qr+ ")" + " VALUES "+object);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void recreateUsersFromXMLFile(Users users) {
         Connection connection = initConnection();
         try {
@@ -282,8 +301,8 @@ public class DataBaseManager {
 
     }
 
-    public void update() {
-    }
+    /*public void update() {
+    }*/
 
     public void delete() {
         Connection connection = initConnection();

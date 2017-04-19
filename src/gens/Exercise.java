@@ -222,4 +222,13 @@ public class Exercise {
         this.exerciseWeightKg = value;
     }
 
+    @Override
+    public String toString() {
+        return "('"  + userId
+                + "','" + exerciseName +
+                "','" + exerciseSet +
+                "','" + exerciseReps +
+                "','" + exerciseDurationMins +
+                "','" + exerciseWeightKg + "')";
+    }
 }
